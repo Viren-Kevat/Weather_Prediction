@@ -16,9 +16,9 @@ def get_weather(location, api_key, date):
 def display_weather(weather_data):
     location = weather_data['location']
     forecast = weather_data['forecast']['forecastday'][0]['hour']
-    
+
     st.subheader(f"Weather Forecast for {location['name']}, {location['region']}, {location['country']}")
-    
+
     # Organize forecast data into sections with images
     for hour in forecast:
         time = hour['time'].split(" ")[1]  # Display only the hour
@@ -39,15 +39,16 @@ def display_weather(weather_data):
 # Main function for the app
 def main():
     st.title("Weather Forecast Application 🌤️")
-    
+
     api_key = "0688e70c58c8418c87f200132241510"
-    
+
     # Input field for location
     location = st.text_input("Enter location (e.g., 'New York')", "")
-    
-    # Select date (with a default of tomorrow)
-    date = st.date_input("Select date for forecast", min_value=datetime.date.today() + datetime.timedelta(days=1))
-    
+
+    # Select date (with a default of 14 days ahead)
+    default_date = datetime.date.today() + datetime.timedelta(days=14)
+    date = st.date_input("Select date for forecast", value=default_date, min_value=datetime.date.today() + datetime.timedelta(days=1))
+
     # Handle button click
     if st.button("Get Weather Forecast"):
         if location.strip():  # Check for valid input
