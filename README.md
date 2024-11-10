@@ -74,10 +74,6 @@ To run this app locally, follow these steps:
 
 - After predictions are made, data visualizations such as accuracy scores and confusion matrices are displayed, providing clear insights into the model's performance and reliability. 📈
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 📜
-
 ## Acknowledgments
 
 - Special thanks to [World Weather Online](https://www.worldweatheronline.com/) for providing the weather API used in this project. 🌍
