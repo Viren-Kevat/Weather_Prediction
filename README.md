@@ -76,7 +76,7 @@ To run this app locally, follow these steps:
 
 ## Acknowledgments
 
-- Special thanks to [World Weather Online](https://www.worldweatheronline.com/) for providing the weather API used in this project. 🌍
+- Special thanks to [Meteosource](https://www.meteosource.com/) for providing the weather API used in this project. 🌍
 - This project draws inspiration from various online resources and tutorials related to data science, machine learning, and web development with Streamlit. 💡
 
 ## Conclusion
